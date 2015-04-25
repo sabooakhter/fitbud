@@ -1,0 +1,176 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:id="@+id/container"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+
+        <TextView
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_weight="33"
+            android:gravity="center"
+            android:layout_margin="1dp"
+            android:layout_height="60dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Sleep"
+            android:id="@+id/SleepLabel"
+            android:singleLine="false"
+            android:textIsSelectable="false"
+            android:textSize="28sp" />
+
+        <TextView
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_weight="34"
+            android:layout_margin="1dp"
+            android:layout_height="60dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Food"
+            android:id="@+id/FoodLabel"
+            android:textSize="28sp"
+            android:textIsSelectable="true" />
+
+        <TextView
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="1dp"
+            android:layout_height="60dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Activity"
+            android:id="@+id/ActivityLabel"
+            android:textSize="28sp"
+            android:textIsSelectable="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+
+        <TextView
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_weight="33"
+            android:gravity="center"
+            android:layout_margin="1dp"
+            android:layout_height="100dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="8 Hrs"
+            android:id="@+id/SleepLabel2"
+            android:singleLine="false"
+            android:textIsSelectable="false"
+            android:textSize="24sp" />
+
+        <TextView
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_weight="34"
+            android:layout_margin="1dp"
+            android:layout_height="100dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="1000 cal"
+            android:id="@+id/FoodLabel2"
+            android:textSize="24sp"
+            android:textIsSelectable="true" />
+
+        <TextView
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="1dp"
+            android:layout_height="100dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="6.2 mi"
+            android:id="@+id/ActivityLabel2"
+            android:textSize="24sp"
+            android:textIsSelectable="true" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_margin="1dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goal Status"
+            android:id="@+id/GoalLabel"
+            android:textSize="30sp"
+            android:layout_margin="19dp"
+            android:layout_gravity="left|top" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textSize="24sp"
+            android:layout_margin="10dp"
+            android:id="@+id/EditButton"
+            android:layout_gravity="right|top"
+            android:clickable="true"
+            android:onClick="editGoal"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:id="@+id/ProgressBar"
+            android:layout_gravity="center_vertical"
+            android:clickable="false"
+            android:max="100"
+            android:progress="50" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Progress: 50%"
+            android:textSize="24sp"
+            android:layout_margin="50dp"
+            android:id="@+id/ProgressLabel"
+            android:layout_gravity="center_horizontal|bottom" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="FACTS:"
+        android:background="#FFFFFF"
+        android:textSize="24sp"
+        android:layout_marginRight="1dp"
+        android:layout_marginLeft="1dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/FactLabel"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF"
+        android:layout_marginRight="1dp"
+        android:layout_marginLeft="1dp"
+        android:choiceMode="none"
+        android:id="@+id/FactList">
+    </ListView>
+
+</LinearLayout>
